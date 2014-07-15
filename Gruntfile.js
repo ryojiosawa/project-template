@@ -68,6 +68,6 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.registerTask('init', ['clean', 'bower']);
+    grunt.registerTask('init', ['clean', 'bower', 'browserify:vendor']);
     grunt.registerTask('build:dev', ['clean:dev', 'browserify:app', 'browserify:test']);
 };
