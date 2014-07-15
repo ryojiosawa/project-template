@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript Test Suite [Mocha]</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="src/lib/mocha/mocha.css"/>
+    <script src="src/lib/jquery/jquery.js"></script>
+    <script src="src/lib/underscore/underscore.js"></script>
+    <script src="src/lib/mocha/mocha.js"></script>
+    <script src="src/lib/should/should.js"></script>
+
+    <script>
+        // Tell mocha to use bdd-style expects
+        mocha.setup('bdd');
+    </script>
+
+    <!-- Load tests and helpers here -->
+    <script src="build/tests.js"></script>
+
+    <script>
+        // Mocha expects a global onload var here and automagically executes it on pageload
+        onload = function () {
+            var runner = mocha.run();
+        };
+    </script>
+</head>
+<body>
+<div id="mocha"></div>
+</body>
+</html>
